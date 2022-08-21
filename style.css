@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+    font-family: "Ubuntu", sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.writer-container {
+    width: 60%;
+}
+
+.keywords-container {
+    width: 30%;
+}
+
+#seo-content {
+    width: 60%;
+    min-height: 70vh;
+    height: fit-content;
+}
