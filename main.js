@@ -6,16 +6,34 @@ let keywordsList = document.querySelector(".keywords-list");
 let resetKeywordsBtn = document.querySelector("#reset-keywords-btn");
 let itemList = [];
 
-inputKeywordBtn.addEventListener("click", addKeyword());
+inputKeywordBtn.addEventListener("click", addKeyword);
 
 function addKeyword() {
     let value = inputKeyword.value;
     itemList.push(value);
+    addToList(value);
     inputKeyword.value = "";
 }
 
+function addToList(value) {
+    let li = document.createElement("li");
+    li.classList.add("keyword-item");
+    li.innerText = value;
+    let frequencyNumber = document.createElement("span");
+    frequencyNumber.classList.add("keyword-frequency");
+    frequencyNumber.innerText = 0;
+    li.append(frequencyNumber);
+    keywordsList.append(li);
+}
 
-console.log(itemList);
+resetKeywordsBtn.addEventListener("click", removeKeywords);
+
+function removeKeywords() {
+    while (keywordsList.firstElementChild)
+        keywordsList.removeChild(keywordsList.firstElementChild);
+}
+
+
 
 
 

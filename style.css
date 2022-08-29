@@ -49,6 +49,17 @@ hr {
     margin: 1em 0;
 }
 
+.keywords-list {
+    margin: 0;
+    padding: 0;
+}
+
+.keywords-list li {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
 .btn {
     background-color: #3B9778;
     border: #3B9778;
