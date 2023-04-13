@@ -86,8 +86,6 @@ function markKeywords(text, keywordValue, arrayOfIndex) {
     const markTagLength = 31;
     let newArticle = text;
 
-    // czy w warunku pętli też używać const i czy let i?
-
     for (let i = 0; i < arrayOfIndex.length; i++) {
         const startIndex = arrayOfIndex[i];
 
